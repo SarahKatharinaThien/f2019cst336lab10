@@ -1,5 +1,5 @@
 {
-  "name": "f2019cst336lab10",
+  "name": "f2019cst336lab9",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -8,17 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SarahKatharinaThien/f2019cst336lab10.git"
+    "url": "git+https://github.com/SarahKatharinaThien/f2019cst336lab9.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SarahKatharinaThien/f2019cst336lab10/issues"
+    "url": "https://github.com/SarahKatharinaThien/f2019cst336lab9/issues"
   },
-  "homepage": "https://github.com/SarahKatharinaThien/f2019cst336lab10#readme",
+  "homepage": "https://github.com/SarahKatharinaThien/f2019cst336lab9#readme",
   "dependencies": {
     "ejs": "^2.7.4",
     "express": "^4.17.1",
-    "mysql": "^2.17.1"
-  }
+    "mysql": "^2.17.1",
+    "nodemon": "^1.19.4"
+  },
+  "devDependencies": {}
 }

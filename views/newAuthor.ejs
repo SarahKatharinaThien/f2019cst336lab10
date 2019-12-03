@@ -1,0 +1,27 @@
+<% include partials/header.ejs %>
+
+</head>
+<body class="text-center">
+
+<h1 class="jumbotron"> Adding a New Author </h1>
+
+<form method="POST">
+
+    First name: <input type="text" name="firstName"><br> <br>
+    Last name: <input type="text" name="lastName"><br> <br>
+    Gender: <input type="radio" name="gender" value="F">Female
+    <input type="radio" name="gender" value="M">Male
+    <!--TODO: Add the remaining fields -->
+    <br><br>
+    <button class="btn btn-outline-primary">Add Author</button>
+
+    <%= typeof (message) != "undefined" ? message : "" %>
+
+</form>
+
+<div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&uarr;</button>
+</div>
+
+<br><br>
+<% include partials/footer %>

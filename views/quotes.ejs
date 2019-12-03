@@ -1,35 +1,22 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title> Famous Quote Search </title>
-    <link rel="stylesheet" href="/css/styles.css"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<% include partials/header.ejs %>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-
-    <script>
-        $(document).ready(function () {
-            $("#a").on("click", function () {
-                //alert("test");
-                $.ajax({
-                    method: "GET",
-                    url: "/authorInfo",
-                    dataType: "json",
-                    data: {"authorId": $(this).attr("id")},
-                    success: function (result, status) {
-                        //alert(result[0].firstName);
-                        $("#authorName").html(result[0].firstName + " " + result[0].lastName);
-                        $("#bio").html(result[0].biography);
-                        $('#authorModal').modal("show");
-                    }
-                });//ajax
-            })
-        });//ready
-    </script>
+<script>
+    $(document).ready(function () {
+        $("#a").on("click", function () {
+            $.ajax({
+                method: "GET",
+                url: "/authorInfo?=",
+                dataType: "json",
+                data: {"authorId": $(this).attr("id")},
+                success: function (result, status) {
+                    $("#authorName").html(result[0].firstName + " " + result[0].lastName);
+                    $("#bio").html(result[0].biography);
+                    $('#authorModal').modal("show");
+                }
+            });//ajax
+        })
+    });//ready
+</script>
 </head>
 <body class="text-center">
 
