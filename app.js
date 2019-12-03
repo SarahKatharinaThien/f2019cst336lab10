@@ -255,10 +255,16 @@ function updateAuthor(body) {
             let sql = `UPDATE l9_author
                       SET firstName = ?, 
                           lastName  = ?, 
-                                sex = ?
+                                sex = ?,
+                                dob = ?,
+                                dod = ?,
+                         profession = ?,
+                            country = ?,
+                           portrait = ?,
+                          biography = ?
                      WHERE authorId = ?`;
 
-            let params = [body.firstName, body.lastName, body.gender, body.authorId];
+            let params = [body.firstName, body.lastName, body.gender, body.dob, body.dod, body.profession, body.portrait, body.biography, body.authorId];
 
             console.log(sql);
 

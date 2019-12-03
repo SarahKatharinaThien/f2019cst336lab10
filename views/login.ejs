@@ -23,15 +23,15 @@
                         "password":$("#password").val() },
                     success: function(result,status) {
                         //alert(result);
-                        //if (!result) {
+                        if (!result) {
 
-                          //  alert("Wrong credentials!");
+                            alert("Wrong credentials!");
 
-                        //} else {
+                        } else {
 
-                            window.location.href = "./admin.ejs"; //redirects to admin route
+                            location.href = "/admin"; //redirects to admin route
 
-                        //}
+                        }
                     }
 
                 });//ajax
