@@ -1,6 +1,32 @@
 <% include partials/header.ejs %>
 
 </head>
+    <title> </title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script>
+
+        // $(document).ready( function(){
+
+        //     $(".removeAuthor").on("click", function(event){
+
+        //         if (!confirm("Delete author?")) {
+        //           event.preventDefault(); //prevents default behavior of the links
+        //         }
+
+        //     }); //click
+
+        // } );
+
+        function deleteConfirm(){
+
+            if (!confirm("Delete author?")) {
+                event.preventDefault(); //prevents default behavior of the links
+            }
+        }
+    </script>
 <body class="text-center">
 
 <h1 class="jumbotron"> Admin Section </h1>
@@ -13,7 +39,7 @@
 
 <% authorList.forEach(function(author){ %>
     <a href="/updateAuthor?authorId=<%= author.authorId %>" class="btn btn-secondary btn-sm active">UPDATE</a>
-    <a href="/deleteAuthor?authorId=<%= author.authorId %>" class="btn btn-secondary btn-sm active">DELETE</a>
+    <a onclick="deleteConfirm()" href="/deleteAuthor?authorId=<%= author.authorId %>" class="btn btn-secondary btn-sm active">DELETE</a>
     <%= author.firstName %> <%= author.lastName %> <br>
 <% }) %>
 
