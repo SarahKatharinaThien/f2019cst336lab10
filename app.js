@@ -22,6 +22,10 @@ app.get("/authorInfo", async function (req, res) {
     res.render("quotes", {"authors": rows});
 });//authorInfo
 
+app.get("/login", function (req, res) {
+    res.render("login");
+});//admin
+
 app.get("/admin", async function (req, res) {
 
     let authorList = await getAuthorList();
